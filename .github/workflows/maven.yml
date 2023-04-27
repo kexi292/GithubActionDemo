@@ -13,9 +13,7 @@ on: [ push ]
 #       - 'main'
 #     paths:
 #       - 'demo/**'
-permissions: 
-      read-all
-      write-all
+permissions: write-all
 
 jobs:
   build:
