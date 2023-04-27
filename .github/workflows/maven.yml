@@ -11,7 +11,9 @@ name: Java CI with Maven
 on:
   push:
     branches:
-      - 'mian'
+      - 'main'
+    paths:
+      - 'demo/demo.md'
 
 jobs:
   build:
