@@ -2,6 +2,12 @@
 
 ![example workflow](https://github.com/kexi292/testgitaction/actions/workflows/maven.yml/badge.svg)
 
+项目目录说明
+```
+- demo 极简的SpringBoot，整合Jacoco,没有额外整合Junit
+- ad   Android项目，测试失败。
+```
+
 是Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
 
 具体yml如下:
