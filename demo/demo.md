@@ -13,13 +13,3 @@ No description, website, or topics provided.
 
 
 ### Stars
-
-[ **0** stars](https://github.com/kexi292/testgitaction/stargazers)
-
-### Watchers
-
-[ **1** watching](https://github.com/kexi292/testgitaction/watchers)
-
-### Forks
-
-[ **0** forks](https://github.com/kexi292/testgitaction/forks)
