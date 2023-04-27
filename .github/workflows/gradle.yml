@@ -35,8 +35,8 @@ jobs:
     - name: pwd
       run: pwd
     - name: cd
-      run: cd /ad
+      run: cd ./ad
     - name: pwd
       run: pwd
     - name: Execute Gradle build
-      run: ./ad/./gradlew build
+      run: ./gradlew build
