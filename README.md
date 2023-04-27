@@ -2,7 +2,7 @@
 
 ![example workflow](https://github.com/kexi292/testgitaction/actions/workflows/maven.yml/badge.svg)
 
-是Maven 集成 Jacoco 和 junit，运行测试方法的成功率，获取测试方法覆盖率。
+是Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
 
 具体yml如下:
 ```
