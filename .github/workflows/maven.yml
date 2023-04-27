@@ -12,8 +12,6 @@ on:
   push:
     branches:
       - 'mian'
-    paths:
-      - 'demo/demo.md'
 
 jobs:
   build:
