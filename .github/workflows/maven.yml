@@ -25,10 +25,11 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '8'
+        distribution: 'temurin'
     - name: Build with Maven
       run: mvn -B test --file demo/pom.xml
-    - uses: ashley-taylor/junit-report-annotations-action@master
+    - uses: ashley-taylor/junit-report-annotations-action@1.4
+      if: always()
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
-      if: always()
       
