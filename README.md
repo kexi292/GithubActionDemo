@@ -8,7 +8,7 @@
 项目目录说明
 ```
 - demo 极简的SpringBoot，整合Jacoco,没有额外整合Junit
-- ad   Android项目，测试失败。
+- ad   Android项目，测试成功。
 ```
 
 是Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
@@ -66,6 +66,38 @@ jobs:
       
 如需要了解Junit4、5配合maven-surefire-plugin生成Junit报告的最佳实践，可以参考如下资料：
       
-JUnit Setup Maven - JUnit 4 and JUnit 5[https://www.digitalocean.com/community/tutorials/junit-setup-maven]
+1.JUnit Setup Maven - JUnit 4 and JUnit 5[https://www.digitalocean.com/community/tutorials/junit-setup-maven]
 
-Github 官方文档
+2.Github 官方文档
+
+
+实现Android with Gradle的自动化测试
+
+关键的yml如下
+
+```
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    #这里注意目录，本质上是使用shell命令chmod
+    - name: Grant execute permission for gradlew
+      run: chmod +x ad/gradlew
+    #参考gradle文档中的示例
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+    #测试中发现每一个name-run,最后程序进行的目录都会重定向为**/<REPOSITORY>/<REPOSITORY>,因此cd 和后续命令通过;分隔
+    #此处是由于.gradlew build中会找build.gradle文件，然而在原始的目录中会找不到，因此需要切换目录。
+    - name: Execute Gradle build
+      run: cd ./ad;./gradlew build
+```
+
+
