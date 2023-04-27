@@ -1,4 +1,4 @@
-# 使用Github Action 来实现自动化测试和输出报告
+# 使用Github Action 来实现SpringBoot和Android自动化测试和输出报告
 
 ![example workflow](https://github.com/kexi292/testgitaction/actions/workflows/maven.yml/badge.svg)
 
@@ -10,8 +10,9 @@
 - demo 极简的SpringBoot，整合Jacoco,没有额外整合Junit
 - ad   Android项目，测试成功。
 ```
+##SpringBoot相关
 
-是Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
+Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
 
 具体yml如下:
 ```
@@ -71,7 +72,9 @@ jobs:
 2.Github 官方文档
 
 
-实现Android with Gradle的自动化测试
+##实现Android with Gradle的自动化测试
+
+重点解决.gradle build 中出现not find build.gradle问题
 
 关键的yml如下
 
