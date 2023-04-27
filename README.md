@@ -10,7 +10,7 @@
 - demo 极简的SpringBoot，整合Jacoco,没有额外整合Junit
 - ad   Android项目，测试成功。
 ```
-##SpringBoot相关
+## SpringBoot相关
 
 Maven 集成 Jacoco 和 junit，统计测试方法的成功率，获取测试方法覆盖率。
 
@@ -72,7 +72,7 @@ jobs:
 2.Github 官方文档
 
 
-##实现Android with Gradle的自动化测试
+## 实现Android with Gradle的自动化测试
 
 重点解决.gradle build 中出现not find build.gradle问题
 
