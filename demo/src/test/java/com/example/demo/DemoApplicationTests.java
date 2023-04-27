@@ -8,6 +8,11 @@ class DemoApplicationTests {
 
     @Test
     void contextLoads() {
+        int ans = 0;
+        for(int i=0;i<100;i++){
+            ans += i;
+        }
+        System.out.println(ans);
     }
 
 }
