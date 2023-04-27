@@ -8,12 +8,12 @@
 
 name: Java CI with Maven
 
-on:
-  push:
-    branches:
-      - 'main'
-    paths:
-      - 'demo/**'
+on: [ push ]
+#     branches:
+#       - 'main'
+#     paths:
+#       - 'demo/**'
+permissions: write-all
 
 jobs:
   build:
@@ -36,11 +36,13 @@ jobs:
       with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
     - name: Publish test coverage results
+      id: jacoco_reporter
       uses: PavanMudigonda/jacoco-reporter@v4.8
       with:
           coverage_results_path: 'demo/target/site/jacoco/jacoco.xml'
           coverage_report_title: 'Test coverage results'
           coverage_report_name: 'Test coverage results'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
+    
+          
       
