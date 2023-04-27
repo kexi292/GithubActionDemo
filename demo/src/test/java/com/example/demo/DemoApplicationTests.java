@@ -10,7 +10,7 @@ class DemoApplicationTests {
     void contextLoads() {
         int ans = 0;
         for(int i=0;i<100;i++){
-            ans += i;
+            ans += i*i;
         }
         System.out.println(ans);
     }
