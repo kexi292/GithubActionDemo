@@ -1,9 +1,9 @@
 # 使用Github Action 来实现SpringBoot和Android自动化测试和输出报告
 
-![example workflow](https://github.com/kexi292/testgitaction/actions/workflows/maven.yml/badge.svg)
+![example workflow](https://github.com/kexi292/GithubActionDemo/actions/workflows/maven.yml/badge.svg)
 
 
-![example workflow](https://github.com/kexi292/testgitaction/actions/workflows/gradle.yml/badge.svg)
+![example workflow](https://github.com/kexi292/GithubActionDemo/actions/workflows/gradle.yml/badge.svg)
 
 项目目录说明
 ```
