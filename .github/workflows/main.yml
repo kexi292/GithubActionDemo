@@ -1,0 +1,27 @@
+name: server
+
+on: [push]
+permissions: write-all
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: '8'
+        distribution: 'temurin'
+        cache: 'maven'
+      # push后，用ssh连接服务器执行脚本    
+#     - name: ls -a via ssh
+#       uses: fifsky/ssh-action@master
+#       with:
+#         command: |
+#            sh gitserver.sh
+#         host: ${{ secrets.HOST }}
+#         user: ${{ secrets.USER }}
+#         key: ${{ secrets.PRIVATE_KEY}}
