@@ -17,11 +17,11 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
       # push后，用ssh连接服务器执行脚本    
-#     - name: ls -a via ssh
-#       uses: fifsky/ssh-action@master
-#       with:
-#         command: |
-#            sh gitserver.sh
-#         host: ${{ secrets.HOST }}
-#         user: ${{ secrets.USER }}
-#         key: ${{ secrets.PRIVATE_KEY}}
+    - name: ls -a via ssh
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+           sh gitserver.sh
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USER }}
+        key: ${{ secrets.PRIVATE_KEY}}
